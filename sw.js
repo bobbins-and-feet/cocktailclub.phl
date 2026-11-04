@@ -1,5 +1,5 @@
 // Bump VERSION whenever you change any file so returning visitors get the update.
-const VERSION = 'v1';
+const VERSION = 'v2';
 const ASSETS = ['./', 'index.html', 'icon.svg', 'manifest.webmanifest', 'cocktail-club-2027-08.ics'];
 
 self.addEventListener('install', e => {

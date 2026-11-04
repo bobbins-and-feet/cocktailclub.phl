@@ -22,8 +22,8 @@ python3 -m http.server 8000
 ## Each quarter
 
 1. **Seats:** as people Venmo you, add `class="taken"` to one `<i>` inside `.seats` per paid seat. Then update the `0 of 7 taken` text and the `aria-label`.
-2. **Archive the last round:** move it into the `<ul class="archive">` list. A commented example is in the HTML.
-3. **New round:** update the `#next` card. Make a new `.ics` file by copying the old one and changing `UID`, `DTSTART`, `DTEND` (in UTC), and the text. Then update the Google Calendar link's `dates=` and the Venmo note.
+2. **Archive the last round:** move it into the list in the `#archive` section. A commented example is in the HTML.
+3. **New round:** update the `#next` card. Make a new `.ics` file by copying the old one and changing `UID`, `DTSTART`, `DTEND` (in Philadelphia time, `TZID=America/New_York`), and the text. Then update the Google Calendar link's `dates=` (local time; it keeps `ctz=America/New_York`) and the Venmo note.
 4. **Bump `VERSION` in `sw.js`** (e.g. `v1` → `v2`), and add any new `.ics` file to `ASSETS`. Returning visitors then get the update.
 
 ## Hosting
@@ -32,4 +32,4 @@ To publish on GitHub Pages: open Settings → Pages and choose Deploy from branc
 
 ---
 
-Built with ❤️ by [helenvholmes](https://github.com/helenvholmes).
+Built with <3 by [helenvholmes](https://helenvholmes.com).

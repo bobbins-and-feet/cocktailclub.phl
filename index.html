@@ -11,116 +11,127 @@
 <meta property="og:title" content="Cocktail Club PHL">
 <meta property="og:description" content="Cocktails &amp; good conversation. Next round: Thu, Aug 26, 2027 · 48 Record Bar · 5pm.">
 <style>
-:root{--bg:#2a0c12;--rib:#200810;--fg:#f7e3de;--muted:#cfa3aa;--card:#6a2a3a;--card2:#55202e;--line:rgba(255,190,190,.16);--glow:#ff5a36;--glow-soft:#ffb39c;--btn-fg:#2a0c12;color-scheme:dark}
+:root{--table:#2a0c12;--rib:#1f080d;--paper:#f4ede2;--ink:#5c1622;--ink-soft:#7d4650;--rule:#5c1622;color-scheme:light}
 *{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%;background:var(--bg)}
-body{margin:0;color:var(--fg);font:17px/1.55 ui-serif,Georgia,"Iowan Old Style","Palatino Linotype",serif;background-color:var(--bg);
- background-image:radial-gradient(ellipse 70% 40rem at 50% 0,rgba(255,80,45,.22),transparent 70%),repeating-linear-gradient(90deg,var(--rib) 0 6px,var(--bg) 14px 22px,var(--rib) 30px 36px);background-attachment:scroll}
-main,footer{max-width:40rem;margin:0 auto;padding:0 1rem}
-a{color:var(--glow-soft);text-underline-offset:.15em}
-h1,h2,h3{line-height:1.15;font-weight:600;margin:0}
-header{text-align:center;padding:4rem 1rem 2.5rem}
-h1{font-size:clamp(2.3rem,9vw,3.6rem);letter-spacing:-.02em;color:#ffe1d6;text-shadow:0 0 6px rgba(255,120,80,.9),0 0 24px rgba(255,70,40,.7),0 0 60px rgba(255,60,30,.45)}
-.tag{font-style:italic;color:var(--muted);margin:.5rem 0 0;font-size:1.15rem}
-.sans{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
-.eyebrow{font:600 .75rem/1 system-ui,-apple-system,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--glow);margin:0 0 .6rem;text-shadow:0 0 10px rgba(255,80,45,.5)}
-section{margin:0 0 2.75rem}
-.card{background:linear-gradient(170deg,var(--card),var(--card2) 70%);border:1px solid var(--line);border-radius:22px;padding:1.5rem;box-shadow:0 30px 60px -30px rgba(0,0,0,.7),inset 0 1px 0 rgba(255,200,200,.12),0 0 50px -18px rgba(255,70,40,.45)}
-h2{font-size:1.9rem}
-.when{margin:.75rem 0 0;font-size:1.1rem}
-.when b{display:block}
-dl{display:grid;grid-template-columns:auto 1fr;gap:.35rem 1rem;margin:1.25rem 0;font-size:1rem}
-dt{font-weight:600}
-dd{margin:0}
-.menu{list-style:none;padding:0;margin:1rem 0;border-top:1px solid var(--line)}
-.menu li{display:flex;justify-content:space-between;gap:1rem;padding:.5rem 0;border-bottom:1px solid var(--line)}
-.menu span:last-child{font-variant-numeric:tabular-nums;font-weight:600;color:var(--glow-soft)}
-.btns{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.25rem}
-.btn{display:inline-block;padding:.7rem 1.05rem;border-radius:999px;border:1.5px solid rgba(255,140,110,.55);color:var(--fg);font:600 .95rem/1 system-ui,-apple-system,sans-serif;text-decoration:none}
-.btn:hover{border-color:var(--glow)}
-.btn.primary{background:var(--glow);border-color:var(--glow);color:var(--btn-fg);box-shadow:0 0 22px rgba(255,80,45,.55)}
-.seats{display:flex;gap:.45rem;margin:.6rem 0 .25rem}
-.seats i{width:1.4rem;height:1.4rem;border-radius:50%;border:2px solid rgba(255,140,110,.6)}
-.seats i.taken{background:var(--glow);border-color:var(--glow);box-shadow:0 0 12px rgba(255,80,45,.8)}
-.small{font-size:.9rem;color:var(--muted)}
-.rsvp{display:grid;gap:1.5rem;align-items:center}
-@media (min-width:34rem){.rsvp{grid-template-columns:1fr 11rem}}
-.qr{background:#fff;padding:.6rem;border-radius:12px;width:11rem;justify-self:center;box-shadow:0 0 36px -6px rgba(255,80,45,.6)}
+html{-webkit-text-size-adjust:100%;background:var(--table)}
+body{margin:0;padding:2rem 1rem 3rem;color:var(--ink);font:17px/1.5 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;background-color:var(--table);
+ background-image:radial-gradient(ellipse 60% 36rem at 50% 0,rgba(255,80,45,.2),transparent 70%),repeating-linear-gradient(90deg,var(--rib) 0 6px,var(--table) 14px 22px,var(--rib) 30px 36px)}
+a{color:inherit;text-underline-offset:.2em;text-decoration-thickness:1px}
+.menu{max-width:34rem;margin:0 auto;background:var(--paper);padding:2.5rem 1.5rem 2rem;border-radius:3px;box-shadow:0 2px 0 rgba(0,0,0,.15),0 40px 80px -30px rgba(0,0,0,.8),0 0 70px -20px rgba(255,70,40,.35)}
+@media (min-width:36rem){.menu{padding:3rem 2.75rem 2.5rem}}
+.caps,h1,h2,dt,.leaders,.btn,.vert{font-family:Futura,"Avenir Next","Century Gothic","Gill Sans",system-ui,sans-serif;text-transform:uppercase;font-weight:600;letter-spacing:.16em}
+h1,h2{margin:0;line-height:1.2;text-align:center}
+.dots{border:0;border-top:2px dotted var(--rule);margin:0}
+.masthead{display:flex;align-items:center;justify-content:center;gap:.75rem;padding:1rem 0}
+h1{font-size:clamp(1.35rem,6vw,1.9rem);letter-spacing:.12em}
+.star{font-size:.8rem}
+.intro{text-align:center;font-style:italic;margin:1.25rem auto 0;max-width:24rem}
+.glass{display:block;width:3.5rem;height:3.5rem;margin:1.25rem auto 0}
+section{margin-top:2.25rem}
+h2{font-size:.95rem;margin-bottom:.35rem}
+.sub{text-align:center;font-style:italic;margin:0 0 1.1rem;color:var(--ink-soft)}
+.label{border-top:3px solid var(--rule);border-bottom:3px solid var(--rule);margin:0;padding:0}
+.label div{display:flex;justify-content:space-between;gap:1rem;padding:.4rem 0;border-bottom:1px solid var(--rule)}
+.label div:last-child{border-bottom:0}
+dt{font-size:.78rem;letter-spacing:.1em;padding-top:.15em}
+dd{margin:0;text-align:right}
+.leaders{list-style:none;padding:0;margin:0;font-size:.78rem}
+.leaders li{display:flex;align-items:baseline;gap:0;padding:.3rem 0}
+.leaders .fill{flex:1;min-width:1.5em;border-bottom:2px dotted var(--rule);margin:0 .5em;transform:translateY(-.25em)}
+.leaders .note{font:italic 400 .95rem/1.3 "Iowan Old Style","Palatino Linotype",Georgia,serif;text-transform:none;letter-spacing:0;color:var(--ink-soft);text-align:center;width:100%}
+.links{text-align:center;margin:1rem 0 0;font-size:.72rem}
+.links a{margin:0 .5em;white-space:nowrap}
+.btns{display:flex;flex-wrap:wrap;justify-content:center;gap:.6rem;margin-top:1.25rem}
+.btn{display:inline-block;padding:.7rem 1rem .65rem;border:1.5px solid var(--ink);font-size:.7rem;text-decoration:none;border-radius:2px}
+.btn.solid{background:var(--ink);color:var(--paper)}
+.box{border:2px dotted var(--rule);padding:6px}
+.box-inner{border:2px dotted var(--rule);display:flex}
+.vert{display:flex;flex-direction:column;justify-content:center;gap:.35rem;padding:1rem .9rem;font-size:1.35rem;letter-spacing:0;line-height:1;border-right:2px dotted var(--rule);text-align:center}
+.box-body{flex:1;padding:1.25rem 1rem;min-width:0}
+.box-body h2{text-align:left;margin-bottom:.75rem}
+ol{margin:0;padding-left:1.2rem}
+ol li+li{margin-top:.3rem}
+.seats{display:flex;gap:.4rem;margin:1rem 0 .3rem}
+.seats i{width:1.15rem;height:1.15rem;border-radius:50%;border:1.5px solid var(--ink)}
+.seats i.taken{background:var(--ink)}
+.small{font-size:.85rem;font-style:italic;color:var(--ink-soft);margin:0}
+.qr{width:9.5rem;margin:1.25rem 0 0;padding:.35rem;background:#fff;border:1.5px solid var(--ink)}
 .qr svg{display:block;width:100%;height:auto}
-ol{padding-left:1.25rem}
-.archive{list-style:none;padding:0;margin:1rem 0 0}
-.archive li{padding:.75rem 0;border-bottom:1px solid var(--line)}
-footer{padding:2rem 1rem 3rem;text-align:center;color:var(--muted);font-size:.95rem;border-top:1px solid var(--line)}
-@media (prefers-reduced-motion:no-preference){.btn{transition:border-color .15s}}
+.box .btns{justify-content:flex-start}
+.fine{text-align:center;font-style:italic;font-size:.9rem;line-height:1.7;margin:2.25rem 0 0;color:var(--ink-soft)}
 </style>
 </head>
 <body>
-<header>
-  <p class="eyebrow">Philadelphia · Quarterly</p>
-  <h1>Cocktail Club PHL</h1>
-  <p class="tag">Cocktails &amp; good conversation.</p>
-</header>
-<main>
-  <section>
-    <p>Four times a year, a handful of us try a different Philadelphia cocktail bar together. Anyone is welcome. Come alone or bring a friend, but seating is capped at <strong>seven people</strong> to keep it small enough for one real conversation.</p>
+<main class="menu">
+  <hr class="dots">
+  <div class="masthead"><span class="star" aria-hidden="true">✦</span><h1>Cocktail Club</h1><span class="star" aria-hidden="true">✦</span></div>
+  <hr class="dots">
+  <svg class="glass" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 20h44c0 10-9.5 16-22 16s-22-6-22-16z"/><path d="M14 24.5c8 3 28 3 36 0"/><path d="M32 36v17"/><path d="M22 57c5-2.5 15-2.5 20 0"/><circle cx="45" cy="15" r="3.2"/><path d="M45.5 11.8c.6-4 3.5-7 7.5-7.8"/></svg>
+  <p class="intro">Cocktails &amp; good conversation. Each quarter, seven of us try a different Philadelphia cocktail bar. Anyone is welcome.</p>
+
+  <section id="next" aria-labelledby="next-h">
+    <h2 id="next-h">No. 1 · 48 Record Bar</h2>
+    <p class="sub">A hi-fi listening room above Sassafras in Old City</p>
+    <dl class="label">
+      <div><dt>Date</dt><dd>Thursday, August 26, 2027</dd></div>
+      <div><dt>Time</dt><dd>5:00 pm Eastern</dd></div>
+      <div><dt>Where</dt><dd>48 S 2nd St, Philadelphia</dd></div>
+      <div><dt>Seats</dt><dd>7</dd></div>
+      <div><dt>Buy-in</dt><dd>$10, toward the tab</dd></div>
+    </dl>
+    <div class="btns">
+      <a class="btn" href="cocktail-club-2027-08.ics" download>Add to calendar</a>
+      <a class="btn" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Cocktail%20Club%20PHL%20%E2%80%94%2048%20Record%20Bar&amp;dates=20270826T170000/20270826T190000&amp;ctz=America/New_York&amp;location=48%20Record%20Bar%2C%2048%20S%202nd%20St%2C%20Philadelphia%2C%20PA%2019106&amp;details=Cocktails%20%26%20good%20conversation.%20%2410%20buy-in%20via%20Venmo%20%40helenvholmes%20holds%20your%20seat.%20https%3A%2F%2Fwww.48recordbar.com%2F" rel="noopener">Google Calendar</a>
+    </div>
   </section>
 
-  <section class="card" id="next" aria-labelledby="next-h">
-    <p class="eyebrow">Next round · No. 1</p>
-    <h2 id="next-h">48 Record Bar</h2>
-    <p class="when"><b>Thursday, August 26, 2027</b>5:00 pm Eastern · Happy hour</p>
-    <dl>
-      <dt>Where</dt><dd>48 S 2nd St, Philadelphia, PA 19106<br><span class="small">Old City, upstairs from Sassafras</span></dd>
-      <dt>Buy-in</dt><dd>$10, put toward the tab</dd>
-    </dl>
-    <h3 class="eyebrow" style="margin-top:1.5rem">Happy hour</h3>
-    <ul class="menu">
-      <li><span>Seasonal cocktails</span><span>$10</span></li>
-      <li><span>House red &amp; white wine</span><span>$10</span></li>
-      <li><span>Seasonal zero-proof cocktails</span><span>$8</span></li>
+  <section aria-labelledby="hh-h">
+    <h2 id="hh-h">Happy Hour</h2>
+    <p class="sub">What we’ll be drinking</p>
+    <ul class="leaders">
+      <li><span>Seasonal cocktails</span><span class="fill"></span><span>10</span></li>
+      <li><span>House red &amp; white wine</span><span class="fill"></span><span>10</span></li>
+      <li><span>Seasonal zero-proof cocktails</span><span class="fill"></span><span>8</span></li>
     </ul>
-    <div class="btns">
-      <a class="btn primary" href="cocktail-club-2027-08.ics" download>Add to calendar (.ics)</a>
-      <a class="btn" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Cocktail%20Club%20PHL%20%E2%80%94%2048%20Record%20Bar&amp;dates=20270826T210000Z/20270826T230000Z&amp;location=48%20Record%20Bar%2C%2048%20S%202nd%20St%2C%20Philadelphia%2C%20PA%2019106&amp;details=Cocktails%20%26%20good%20conversation.%20%2410%20buy-in%20via%20Venmo%20%40helenvholmes%20holds%20your%20seat.%20https%3A%2F%2Fwww.48recordbar.com%2F" rel="noopener">Google Calendar</a>
-      <a class="btn" href="https://www.48recordbar.com/" rel="noopener">Bar website</a>
-      <a class="btn" href="https://www.48recordbar.com/menu" rel="noopener">Menu</a>
-      <a class="btn" href="https://maps.apple.com/?q=48+Record+Bar&amp;address=48+S+2nd+St,+Philadelphia,+PA+19106" rel="noopener">Directions</a>
-    </div>
+    <p class="links caps"><a href="https://www.48recordbar.com/menu" rel="noopener">Full menu</a> · <a href="https://www.48recordbar.com/" rel="noopener">The bar</a> · <a href="https://maps.apple.com/?q=48+Record+Bar&amp;address=48+S+2nd+St,+Philadelphia,+PA+19106" rel="noopener">Directions</a></p>
   </section>
 
   <section id="rsvp" aria-labelledby="rsvp-h">
-    <p class="eyebrow">Save your seat</p>
-    <h2 id="rsvp-h">Seven seats, $10 each</h2>
-    <!-- Update the seats as people pay: add class="taken" to one <i> per paid seat, and change the count below. -->
-    <div class="seats" role="img" aria-label="0 of 7 seats taken"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
-    <p class="small" style="margin-top:0">0 of 7 taken</p>
-    <div class="rsvp">
-      <ol>
-        <li>Venmo <strong>$10</strong> to <a href="https://venmo.com/u/helenvholmes" rel="noopener"><strong>@helenvholmes</strong></a>. Scan the code or tap the button.</li>
-        <li>Put <em>“Cocktail Club”</em> and the date in the note.</li>
-        <li>That’s it. Your $10 goes straight toward the tab, and the first seven payments get the seats.</li>
-      </ol>
-      <div class="qr" role="img" aria-label="QR code that opens the Venmo profile for @helenvholmes">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31 31" shape-rendering="crispEdges"><path fill="#fff" d="M0 0h31v31H0z"/><path stroke="#000" d="M1 1.5h7m1 0h2m1 0h1m1 0h3m1 0h4m1 0h7M1 2.5h1m5 0h1m1 0h2m1 0h3m2 0h3m3 0h1m5 0h1M1 3.5h1m1 0h3m1 0h1m2 0h1m1 0h2m3 0h1m2 0h2m1 0h1m1 0h3m1 0h1M1 4.5h1m1 0h3m1 0h1m1 0h1m2 0h1m2 0h2m1 0h1m4 0h1m1 0h3m1 0h1M1 5.5h1m1 0h3m1 0h1m3 0h1m3 0h1m1 0h2m1 0h1m2 0h1m1 0h3m1 0h1M1 6.5h1m5 0h1m2 0h3m1 0h1m1 0h2m1 0h2m2 0h1m5 0h1M1 7.5h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7M9 8.5h1m3 0h1m2 0h4m1 0h1M1 9.5h1m1 0h2m1 0h3m1 0h1m1 0h3m1 0h1m1 0h2m3 0h1m2 0h1m1 0h2M1 10.5h1m1 0h2m1 0h1m4 0h1m1 0h4m1 0h8m3 0h1M1 11.5h11m1 0h2m2 0h1m1 0h1m2 0h2m3 0h2M3 12.5h1m2 0h1m1 0h2m1 0h3m3 0h1m3 0h2m1 0h2m3 0h1M1 13.5h1m2 0h6m5 0h2m1 0h1m1 0h1m1 0h1m3 0h2M1 14.5h2m1 0h1m1 0h1m3 0h1m2 0h1m1 0h1m1 0h5m1 0h1m3 0h3M1 15.5h1m1 0h3m1 0h1m3 0h2m1 0h1m1 0h7m2 0h1m1 0h3M1 16.5h2m1 0h1m5 0h4m1 0h1m1 0h1m1 0h1m1 0h4m3 0h1M2 17.5h1m1 0h7m1 0h2m1 0h2m2 0h1m2 0h1m1 0h3m1 0h1M4 18.5h1m1 0h1m1 0h1m1 0h1m1 0h1m2 0h1m1 0h2m2 0h1m2 0h1m1 0h3M1 19.5h1m1 0h1m3 0h4m1 0h6m1 0h1m1 0h2m1 0h2m1 0h1M5 20.5h1m4 0h3m1 0h3m1 0h1m1 0h1m1 0h2m3 0h1M2 21.5h3m1 0h2m1 0h7m2 0h2m1 0h7M9 22.5h1m3 0h1m3 0h3m1 0h1m3 0h5M1 23.5h7m1 0h3m3 0h1m1 0h1m1 0h3m1 0h1m1 0h2m1 0h1M1 24.5h1m5 0h1m1 0h1m1 0h2m1 0h2m3 0h3m3 0h2m2 0h1M1 25.5h1m1 0h3m1 0h1m2 0h1m2 0h1m2 0h1m1 0h1m2 0h5m1 0h2M1 26.5h1m1 0h3m1 0h1m1 0h1m3 0h1m2 0h2m2 0h3m1 0h3m2 0h1M1 27.5h1m1 0h3m1 0h1m1 0h1m9 0h1m1 0h1m2 0h1m2 0h1m1 0h1M1 28.5h1m5 0h1m2 0h2m1 0h5m1 0h1m1 0h1m1 0h1m2 0h1m1 0h1M1 29.5h7m1 0h4m1 0h3m2 0h5m2 0h1m1 0h1"/></svg>
+    <div class="box"><div class="box-inner">
+      <div class="vert" aria-hidden="true"><span>R</span><span>S</span><span>V</span><span>P</span></div>
+      <div class="box-body">
+        <h2 id="rsvp-h">Save your seat</h2>
+        <ol>
+          <li>Venmo <strong>$10</strong> to <a href="https://venmo.com/u/helenvholmes" rel="noopener"><strong>@helenvholmes</strong></a>.</li>
+          <li>Note <em>“Cocktail Club, Aug 26.”</em></li>
+          <li>The first seven get the seats, and every dollar goes to the tab.</li>
+        </ol>
+        <!-- As people pay: add class="taken" to one <i> per seat, and update the text + aria-label. -->
+        <div class="seats" role="img" aria-label="0 of 7 seats taken"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <p class="small">0 of 7 seats taken</p>
+        <div class="qr" role="img" aria-label="QR code that opens the Venmo profile for @helenvholmes">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31 31" shape-rendering="crispEdges"><path fill="#fff" d="M0 0h31v31H0z"/><path stroke="#000" d="M1 1.5h7m1 0h2m1 0h1m1 0h3m1 0h4m1 0h7M1 2.5h1m5 0h1m1 0h2m1 0h3m2 0h3m3 0h1m5 0h1M1 3.5h1m1 0h3m1 0h1m2 0h1m1 0h2m3 0h1m2 0h2m1 0h1m1 0h3m1 0h1M1 4.5h1m1 0h3m1 0h1m1 0h1m2 0h1m2 0h2m1 0h1m4 0h1m1 0h3m1 0h1M1 5.5h1m1 0h3m1 0h1m3 0h1m3 0h1m1 0h2m1 0h1m2 0h1m1 0h3m1 0h1M1 6.5h1m5 0h1m2 0h3m1 0h1m1 0h2m1 0h2m2 0h1m5 0h1M1 7.5h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7M9 8.5h1m3 0h1m2 0h4m1 0h1M1 9.5h1m1 0h2m1 0h3m1 0h1m1 0h3m1 0h1m1 0h2m3 0h1m2 0h1m1 0h2M1 10.5h1m1 0h2m1 0h1m4 0h1m1 0h4m1 0h8m3 0h1M1 11.5h11m1 0h2m2 0h1m1 0h1m2 0h2m3 0h2M3 12.5h1m2 0h1m1 0h2m1 0h3m3 0h1m3 0h2m1 0h2m3 0h1M1 13.5h1m2 0h6m5 0h2m1 0h1m1 0h1m1 0h1m3 0h2M1 14.5h2m1 0h1m1 0h1m3 0h1m2 0h1m1 0h1m1 0h5m1 0h1m3 0h3M1 15.5h1m1 0h3m1 0h1m3 0h2m1 0h1m1 0h7m2 0h1m1 0h3M1 16.5h2m1 0h1m5 0h4m1 0h1m1 0h1m1 0h1m1 0h4m3 0h1M2 17.5h1m1 0h7m1 0h2m1 0h2m2 0h1m2 0h1m1 0h3m1 0h1M4 18.5h1m1 0h1m1 0h1m1 0h1m1 0h1m2 0h1m1 0h2m2 0h1m2 0h1m1 0h3M1 19.5h1m1 0h1m3 0h4m1 0h6m1 0h1m1 0h2m1 0h2m1 0h1M5 20.5h1m4 0h3m1 0h3m1 0h1m1 0h1m1 0h2m3 0h1M2 21.5h3m1 0h2m1 0h7m2 0h2m1 0h7M9 22.5h1m3 0h1m3 0h3m1 0h1m3 0h5M1 23.5h7m1 0h3m3 0h1m1 0h1m1 0h3m1 0h1m1 0h2m1 0h1M1 24.5h1m5 0h1m1 0h1m1 0h2m1 0h2m3 0h3m3 0h2m2 0h1M1 25.5h1m1 0h3m1 0h1m2 0h1m2 0h1m2 0h1m1 0h1m2 0h5m1 0h2M1 26.5h1m1 0h3m1 0h1m1 0h1m3 0h1m2 0h2m2 0h3m1 0h3m2 0h1M1 27.5h1m1 0h3m1 0h1m1 0h1m9 0h1m1 0h1m2 0h1m2 0h1m1 0h1M1 28.5h1m5 0h1m2 0h2m1 0h5m1 0h1m1 0h1m1 0h1m2 0h1m1 0h1M1 29.5h7m1 0h4m1 0h3m2 0h5m2 0h1m1 0h1"/></svg>
+        </div>
+        <div class="btns">
+          <a class="btn solid" href="https://venmo.com/helenvholmes?txn=pay&amp;amount=10&amp;note=Cocktail%20Club%20PHL%20%E2%80%94%20Aug%2026%2C%202027" rel="noopener">Pay $10 on Venmo</a>
+        </div>
       </div>
-    </div>
-    <div class="btns">
-      <a class="btn primary" href="https://venmo.com/helenvholmes?txn=pay&amp;amount=10&amp;note=Cocktail%20Club%20PHL%20%E2%80%94%20Aug%2026%2C%202027" rel="noopener">Pay $10 on Venmo</a>
-    </div>
+    </div></div>
   </section>
 
   <section id="archive" aria-labelledby="archive-h">
-    <p class="eyebrow">Archive</p>
-    <h2 id="archive-h">Past rounds</h2>
-    <!-- When a round is over, move it here: <li><strong>No. 1 · 48 Record Bar</strong><br><span class="small">Thu, Aug 26, 2027 · Old City</span></li> -->
-    <ul class="archive">
-      <li class="small">Nothing here yet. Round No. 1 is still ahead.</li>
+    <hr class="dots">
+    <h2 id="archive-h" style="margin:1rem 0 .35rem">Past Rounds</h2>
+    <p class="sub">The archive</p>
+    <!-- When a round is over, move it here:
+      <li><span>No. 1 · 48 Record Bar</span><span class="fill"></span><span>Aug ’27</span></li> -->
+    <ul class="leaders">
+      <li><span class="note">Nothing yet. Round No. 1 is still ahead.</span></li>
     </ul>
   </section>
+
+  <p class="fine">Best enjoyed slowly and in good company.<br>Built with &lt;3 by <a href="https://helenvholmes.com" rel="noopener">helenvholmes</a>.<br>Open source on <a href="https://github.com/bobbins-and-feet/cocktailclub.phl" rel="noopener">GitHub</a>.</p>
 </main>
-<footer class="sans">
-  <p>Built with ❤️ by <a href="https://github.com/helenvholmes" rel="noopener">helenvholmes</a>. Open source on <a href="https://github.com/bobbins-and-feet/cocktailclub.phl" rel="noopener">GitHub</a>.</p>
-</footer>
 <script>if('serviceWorker'in navigator)addEventListener('load',()=>navigator.serviceWorker.register('sw.js'))</script>
 </body>
 </html>
