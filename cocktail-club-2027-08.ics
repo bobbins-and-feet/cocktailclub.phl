@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cocktail Club PHL//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:2027-08-26-48recordbar@cocktailclub.phl
+DTSTAMP:20261104T000000Z
+DTSTART:20270826T210000Z
+DTEND:20270826T230000Z
+SUMMARY:Cocktail Club PHL — 48 Record Bar
+LOCATION:48 Record Bar\, 48 S 2nd St\, Philadelphia\, PA 19106
+DESCRIPTION:Cocktails & good conversation. Happy hour: $10 seasonal cockta
+ ils\, $10 house red & white wine\, $8 seasonal zero-proof cocktails. $10 
+ buy-in via Venmo @helenvholmes holds your seat (7 max).
+URL:https://www.48recordbar.com/
+END:VEVENT
+END:VCALENDAR
